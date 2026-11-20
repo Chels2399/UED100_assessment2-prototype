@@ -1,0 +1,100 @@
+/*--BASE NETFLIX THEME--*/
+
+/* Page Background and Default Font */
+body {
+    background-color: #141414;   /* Dark cinema background colour like Netflix */
+    color: white;     /* All default text is white for contrast */
+    font-family: 'Inter', sans-serif;    /* Clean and modern typeface for body */
+    padding: 10px;   /* Breathing room for outer page edges - Reduce from 20px to fit mobile screens better*/
+}
+
+/*Netflix Header Layout*/
+.netflix-header {
+   display: flex;    /* Turns header into flex container */
+   align-items: center;  /* Centers the Netflix logo and the navigation links vertically*/
+   justify-content: flex-start;  /*  Added to group tightly to the left of page */
+   padding: 10px 15px;    /* Adds internal spacing around the header - Reduced padding from 20px 40px to better fit mobiles*/
+   background-color: #141414;   /* Matching dark themed background */
+}
+
+.netflix-header h1 {
+    color: #e50914;  /* Signature Netflix Red */
+    font-family: 'Bebas Neue' , sans-serif;  /* Bebas Neue is the closest free font to Netflix Sans */
+    font-size: 2.8rem;     /* Large and prominent logo - Increased from 2.5rem as it was too small - Decreased from 4rem as it was too big*/
+    margin-right: 10px;   /* Space between logo and navigation item list - Reduced from 20px */
+}
+
+/* Horizontal Navigation Bar Links */
+.nav-links {
+    display: flex;     /* Lines list items horizontally and in a row */
+    list-style: none;  /* Removes the default bullet points */
+    gap: 10px;    /* Creates spacing between each tab - Reduced from 20px */
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem; /* Added to create slightly smaller text so 'New & Popular' fits the mobile screen */
+}
+
+.nav-links a {
+color: #e5e5e5;   /* Muted grey for inactive navigation links */
+text-decoration: none;   /* Removes defauly blue underline from links */
+font-family: 'Inter', sans-serif;
+font-size: 0.85rem;    /* Reduced from 0.95rem to ensure link font fits mobile width */
+transition: color 0.3s;    /* Animates colour changes over 3s, with hover mouse */
+}
+
+/*  Hover for Navigation Links */
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;     /* Text turns a bright white once interacted with */
+    font-weight: bold;    /* Emphasises active page or hovered over link */
+}
+
+
+/* Large Cinematic Headings */
+h2, .mood-row h3 {
+    font-family: 'Bebas Neue', sans-serif; /* Closest to Netflix Sans, remains consistent */
+    letter-spacing: 1px; /* Slightly spaces letters to make it look high quality */
+}
+
+/* Mood Filter Buttons */
+.mood-btn {
+    background-color: #333333;   /* Dark grey for unselected filters */
+    color: white;   
+    border: none;   /* Removes default button orders */
+    padding: 10px 18px;  
+    margin: 5px;   /* Applies spacing around the buttons so they don't touch each other */
+    border-radius: 20px;    /* Applies a rounded pill shape to the buttons */
+    cursor: pointer;  /* Changes cursor to pointing hand for evidence of clickability */
+}
+
+.mood-btn:hover, .mood-btn.active {
+    background-color: #e50914; /* Netflix Brand Colour Red upon hovering interaction */
+}
+
+/* Horizontal Movie Carousel-Row */
+.carousel-track {
+    display: flex;    /* Lines movies up side by side horizontally */
+    gap: 15px;        /* Gap between movies */
+    overflow-x: auto; /* Allows you to scroll left and right */
+    padding-bottom: 15px;  /* Applies scroll bar spacing */
+}
+
+/* Individual Movie Cards */
+.movie-card {
+    min-width: 200px;    /* Stops the cards from squishing against one another on smaller screens */
+}
+
+.movie-card img {
+    width: 200px;
+    height:300px;
+    object-fit: cover;  /* Neatly crops the posters to stop stretching and distorting */
+    border-radius: 6px;  /* Softens sharp corners of posters */
+}
+
+/* Highlighted interactive elements when nav by keyboard */
+a:focus-visible,
+button:focus-visible
+[tabindex]:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+    border-radius: 4px;
+}

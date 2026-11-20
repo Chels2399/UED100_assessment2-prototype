@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--GOOGLE FONTS: BEBAS NEUE & INTER-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Need UTF-8 encoding so text and symbols don't break -->
+     <meta charset="UTF-8">
+
+     <!-- Makes sure the page accurately scales on mobile and tablet screen --> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Netflix Prototype - Assessment 2</title>
+
+     <!--Linking my external CSS stylesheet here so all of the custom styles, dark mode background colours, 
+     and responsive layouts are accurately applied-->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Main header container to wrap the top nav bar to match Netflix's standard
+    desktop layout-->
+<header class="netflix-header">
+    <!--Brand title logo in Netflix signature red-->
+    <h1>Netflix</h1>
+
+    <!--Using the semantic navigation for accessibility compliance so screen readers
+    and assistive technology can parse the menu (WCAG)-->
+    <nav>
+        <!--Unordered list that holds the primary browse category links-->
+        <ul class="nav-links">     <!--An unordered list container that applies the navigation link CSS class for horizontal arrangement-->
+            <li><a href="#" class="active">Home</a></li> <!--Created primary Home navigation link-->
+            <li><a href="#">Series</a></li> <!--Provides clickable link to filter content-->
+            <li><a href="#">Films</a></li>  <!--Provides a dedicated navigation link for film categories-->
+            <li><a href="#">New & Popular</a></li> <!--Links trending or newly added titles-->
+        </ul>
+    </nav>
+</header>
+<!--Main content area that holds the hero section and the custom filters-->
+<main>
+    <!--Featured hero banner section that is the prominent visual focal point-->
+    <section>
+        <h2>Featured Title</h2>
+        <p>Experience an immersive entertainment stream with smooth interaction patterns.</p>
+    </section>
+
+    <!---Custom mood tag filter bar designed to combat decision fatigue-->
+    <section>
+        <h3>Filter by Mood</h3>
+        <div>
+            <button class="mood-btn" data-mood="Dark & Gritty">Dark & Gritty</button>
+            <button class="mood-btn" data-mood="Fast-Paced">Fast-Paced</button>
+            <button class="mood-btn" data-mood="Mind-Bending">Mind-Bending</button>
+            <button class="mood-btn" data-mood="Lighthearted">Lighthearted</button>
+        </div>
+    </section>
+<!--Movie thumbnail grid utilising proposed mood filter buttons-->
+
+<!--ROW 1: DARK & GRITTY CAROUSEL-->
+<section class="mood-row" data-mood="Dark & Gritty">
+    <h3>Dark & Gritty</h3>
+    <div class="carousel-track">
+        <div class="movie-card">
+            <img src="images/no-country-for-old-men.jpg" alt="Dark & Gritty Movie 1 cover art">
+            <h4>No Country for Old Men</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/only-god-forgives.jpg" alt="Dark & Gritty Movie 2 cover art">
+            <h4>Only God Forgives</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/28-days-later.jpg" alt="Dark & Gritty Movie 3 cover art">
+            <h4>28 Days Later</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/the-revenant.jpg" alt="Dark & Gritty Movie 4 cover art">
+            <h4>The Revenant</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/seven.jpg" alt="Dark & Gritty Movie 5 cover art">
+            <h4>Seven</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/the-road.jpg" alt="Dark & Gritty Movie 6 cover art">
+            <h4>The Road</h4>
+        </div>  
+    </div>
+</section>
+
+<!--ROW 2: FAST-PACED CAROUSEL-->
+<section class="mood-row" data-mood="Fast-Paced">
+    <h3>Fast-Paced</h3>
+    <div class="carousel-track">
+        <div class="movie-card">
+            <img src="images/whiplash.jpg" alt="Fast-Paced Movie 1 cover art">
+            <h4>Whiplash</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/fight-club.jpg" alt="Fast-Paced Movie 2 cover art">
+            <h4>Fight Club</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/drive.jpg" alt="Fast-Paced Movie 3 cover art">
+            <h4>Drive</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/kill-bill-vol-1.jpg" alt="Fast-Paced 4 cover art">
+            <h4>Kill Bill: Volume 1</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/300.jpg" alt="Fast-Paced 5 cover art">
+            <h4>300</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/captain-phillips.jpg" alt="Fast-Paced Movie 6 cover art">
+            <h4>Captain Phillips</h4>
+        </div>
+</section>
+
+<!--ROW 3: MIND-BENDING CAROUSEL-->
+<section class="mood-row" data-mood="Mind-Bending">
+    <h3>Mind Bending</h3>
+    <div class="carousel-track">
+        <div class="movie-card">
+            <img src="images/pans-labyrinth.jpg" alt="Mind-Bending Movie 1 cover art">
+            <h4>Pan's Labyrinth</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/inception.jpg" alt="Mind-Bending Movie 2 cover art">
+            <h4>Inception</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/looper.jpg" alt="Mind-Bending Movie 3 cover art">
+            <h4>Looper</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/shutter-island.jpg" alt="Mind-Bending 4 cover art">
+            <h4>Shutter Island</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/the-matrix.jpg" alt="Mind-Bending 5 cover art">
+            <h4>The Matrix</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/tenet.jpg" alt="Mind-Bending Movie 6 cover art">
+            <h4>Tenet</h4>
+        </div>
+ </section>
+
+ <!--ROW 4: LIGHTHEARTED CAROUSEL-->
+<section class="mood-row" data-mood="Lighthearted">
+    <h3>Lighthearted</h3>
+    <div class="carousel-track">
+        <div class="movie-card">
+            <img src="images/21-jump-street.jpg" alt="Lighthearted Movie 1 cover art">
+            <h4>21 Jump Street</h4>
+        </div>
+        <div class="movie-card">
+            <img src="images/scott-pilgim-vs-the-world.jpg" alt="Lighthearted Movie 2 cover art">
+            <h4>Scott Pilgrim vs. the World</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/my-neighbour-totoro.jpg" alt="Lighthearted Movie 3 cover art">
+            <h4>My Neighbour Totoro</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/spirited-away.jpg" alt="Lighthearted 4 cover art">
+            <h4>Spirited Away</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/the-grand-budapest-hotel.jpg" alt="Lighthearted 5 cover art">
+            <h4>The Grand Budapest Hotel</h4>
+        </div>
+         <div class="movie-card">
+            <img src="images/up.jpg" alt="Lighthearted Movie 6 cover art">
+            <h4>Up</h4>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <!--Linking JavaScript file for click loops to run-->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
